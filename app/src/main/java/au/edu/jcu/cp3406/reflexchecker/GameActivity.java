@@ -21,7 +21,9 @@ public class GameActivity extends AppCompatActivity {
             R.drawable.drink_icon,
             R.drawable.food_icon,
     };
-
+    public long start_time;
+    public long end_time;
+    public long elapsed_time;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,7 @@ public class GameActivity extends AppCompatActivity {
             int arrayID = checkbox_array[index];
             addCheckboxes(arrayID);
         }
+        start_time = System.nanoTime();
     }
 
     private void setupDescription(int taskID, int arrayID) {
@@ -80,9 +83,12 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 
-    public void doneClicked(){
+    public void doneClicked(View view){
+        end_time = System.nanoTime();
+        elapsed_time = end_time - start_time;
+        double elapsed_time_second = elapsed_time/1_000_000_000.0;
         Intent data = new Intent();
-        data.putExtra("finish_time",System.nanoTime());
+        data.putExtra("elapsed_time",elapsed_time_second);
         setResult(RESULT_OK, data);
         finish();
     }

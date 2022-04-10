@@ -13,18 +13,23 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    long finish_time;
-    long start_time;
-    long elapsed_time;
+    double elapsed_time;
+    public TextView time_used;
+    public Button start_btn;
+    public String restart = "RESTART";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        time_used = findViewById(R.id.time_used);
+        start_btn = findViewById(R.id.start_btn);
+
     }
 
     public void startTest(View view) {
-        start_time = System.nanoTime();
         Intent intent = new Intent(this, GameActivity.class);
         startActivityForResult(intent, GameActivity.GAME_REQUEST);
     }
@@ -35,17 +40,12 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == GameActivity.GAME_REQUEST) {
             if (resultCode == RESULT_OK) {
                 if (data!=null) {
-                    finish_time = data.getLongExtra("finish_time", 0);
+                    elapsed_time = data.getDoubleExtra("elapsed_time", 0);
                 }
             }
         }
-        elapsed_time = finish_time - start_time;
-        double elapsed_time_second = elapsed_time / 1_000_000_000.0;
-        TextView time_used = findViewById(R.id.time_used);
-        String time_format = String.format(Locale.US,"Time used: %,.2f seconds",elapsed_time_second);
+        String time_format = String.format(Locale.US,"Time used: %,.2f seconds",elapsed_time);
         time_used.setText(time_format);
-        Button start = findViewById(R.id.start_btn);
-        String restart = "RESTART";
-        start.setText(restart);
+        start_btn.setText(restart);
     }
 }
