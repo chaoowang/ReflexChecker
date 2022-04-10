@@ -5,14 +5,48 @@
     <string name="task1">Task 1: </string>
     <string name="task2">Task 2: </string>
     <string name="image_spacer">image_spacer</string>
+    <string name="task_1">Task 1:</string>
+    <string name="task_2">Task 2:</string>
+    <string name="task_3">Task 3:</string>
+    <string name="done_btn">DONE</string>
+    <string name="time_used">Time used:</string>
+    <string name="time_format">00:00</string>
+    <string name="retry_btn">Retry</string>
     <string-array name="task1_descriptions">
         <item>Select all drinks</item>
         <item>Deselect all drinks</item>
         <item>Select one drink</item>
     </string-array>
     <string-array name="task2_descriptions">
-        <item>Select all fruits</item>
-        <item>Deselect all fruits</item>
-        <item>Select one fruit</item>
+        <item>Select all foods</item>
+        <item>Deselect all foods</item>
+        <item>Select one foods</item>
+    </string-array>
+
+    <string-array name="drinks">
+        <item>Cola</item>
+        <item>Juice</item>
+        <item>Soda</item>
+        <item>Coffee</item>
+        <item>Wine</item>
+        <item>Lemonade</item>
+        <item>Black Tea</item>
+        <item>Hot Chocolate</item>
+        <item>Milkshake</item>
+        <item>Beer</item>
+
+    </string-array>
+    <string-array name="foods">
+        <item>Hamburger</item>
+        <item>Chips</item>
+        <item>Fried Chicken</item>
+        <item>Apple Pie</item>
+        <item>Salmon</item>
+        <item>Cake</item>
+        <item>Rice</item>
+        <item>Egg</item>
+        <item>Sandwich</item>
+        <item>Pasta</item>
+        <item>Yogurt</item>
     </string-array>
 </resources>

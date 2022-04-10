@@ -12,6 +12,7 @@
         android:textSize="20sp" />
 
     <Button
+        android:id="@+id/start_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -20,4 +21,15 @@
         android:text="@string/start"
         android:textColor="@color/black"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/time_used"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="80dp"
+        android:textColor="@color/black"/>
 </FrameLayout>

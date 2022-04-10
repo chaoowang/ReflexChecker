@@ -5,6 +5,8 @@
       <map>
         <entry key="app/src/main/res/layout/activity_game.xml" value="0.2695419311523437" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2625024325605752" />
+        <entry key="app/src/main/res/layout/activity_result.xml" value="0.24739583333333334" />
+        <entry key="app/src/main/res/layout/checkboxes.xml" value="0.24739583333333334" />
         <entry key="app/src/main/res/layout/image.xml" value="0.2" />
       </map>
     </option>
